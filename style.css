@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@font-face {
+    font-family: tesla;
+    src: url(TESLA.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+nav,.navlinks,.links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+ul li a{
+    text-decoration: none;
+    color: black;
+}
+.navlinks li,.links li{
+    margin-left: 1.5em;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.navbar{
+    padding: 0.6em 1.5em 0.3em 1.5em;
+    background: transparent;
+}
+
+.textlogo h2{
+    font-family: tesla;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 0.8em;
+}
+.content .heading,.content .para-content,.buttons{
+    display: flex;
+    justify-content: center;
+}
+.content .heading{
+    margin-top: 2.8em;
+    font-size: 1em;
+}
+
+.content .para-content{
+    font-size: 0.9em;
+    margin-top: 0.5em;
+}
+
+.buttons{
+    height: 70vh;
+    align-items: flex-end;
+    margin-top: -3.7em;
+    gap: 1.2em;
+}
+.buttons button{
+    padding: 0.4em 0.8em 0.4em 0.8em;
+    border-radius: 5em;
+    border: none;
+    outline: none;
+    font-size: 0.9em;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.buttons button:first-child{
+    background-color: black;
+    color: white;
+}
+
+.img{
+    height: 100vh;
+}
+.one{
+    background:url(IMAGES/Model3_86.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.two{
+    background:url(IMAGES/ModelY_88.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.three{
+    margin-top: 10em;
+    background: url(IMAGES/Model3_82.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 108vh;
+}
+
+
+.four{
+    padding-top: 0.5em;
+    background: url(IMAGES/0x0-ModelX_09.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.four .buttons{
+    margin-top: 5em;
+    padding-bottom: 8em;
+    margin-bottom: -5.5em;
+
+}
+
+.five{
+
+    background: url(IMAGES/SolarPanels_90.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.five .heading
+{
+    padding-top: 4em;
+}
+.six{
+    background: url(IMAGES/SolarPanels_92.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.six .heading{
+    margin-top: 2em;
+}
+.six .buttons{
+    padding-bottom: 8em;
+}
+
+.seven{
+    background: url(IMAGES/0x0-Charging_22.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+.seven .buttons{
+    height: 50vh;
+    padding-bottom: 1em; 
+}
