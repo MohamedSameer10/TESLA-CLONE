@@ -10,27 +10,53 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.menu,.mark{
+    display: none;
 }
 
 body{
     display: flex;
     flex-direction: column;
 }
-nav,.navlinks,.links{
+li{
+    list-style-type: none;
+}
+
+nav,.navlinks ul{
     display: flex;
-    justify-content: space-between;
     align-items: center;
     list-style: none;
+}
+
+.navlinks{
+    display: flex;
+    width: 100%;
+    margin-left: 12rem;
+    gap: 150px;
+}
+
+nav{
+    position: fixed;
+    top: 10px;
+    z-index: 100;
+}
+
+.navlinks ul:first-child{
+    margin: 0 auto;
 }
 
 ul li a{
     text-decoration: none;
     color: black;
+    font-weight: 700;
+    font-size: 1rem;
 }
-.navlinks li,.links li{
+
+.navlinks li{
     margin-left: 1.5em;
-    font-size: 0.9em;
-    font-weight: 500;
 }
 
 .navbar{
@@ -41,9 +67,10 @@ ul li a{
 .textlogo h2{
     font-family: tesla;
     text-transform: uppercase;
-    font-size: 0.9em;
+    font-size: 1.2em;
     letter-spacing: 0.8em;
 }
+
 .content .heading,.content .para-content,.buttons{
     display: flex;
     justify-content: center;
@@ -64,14 +91,21 @@ ul li a{
     margin-top: -3.7em;
     gap: 1.2em;
 }
+
 .buttons button{
-    padding: 0.4em 0.8em 0.4em 0.8em;
-    border-radius: 5em;
     border: none;
-    outline: none;
-    font-size: 0.9em;
+    font-size: 1.2rem;
     font-weight: 500;
+    width: 240px;
+    border-radius: 0.4rem;
     text-transform: uppercase;
+    padding: 0.5rem;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+button:hover{
+    scale: 0.9;
 }
 
 .buttons button:first-child{
@@ -79,79 +113,125 @@ ul li a{
     color: white;
 }
 
+.buttons button:last-child{
+    background-color: rgb(70, 70, 70);
+    color: white;
+}
+
 .img{
     height: 100vh;
 }
+
 .one{
     background:url(IMAGES/Model3_86.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
 }
 .two{
     background:url(IMAGES/ModelY_88.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
 }
 
 .three{
-    margin-top: 10em;
     background: url(IMAGES/Model3_82.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 108vh;
 }
-
 
 .four{
-    padding-top: 0.5em;
     background: url(IMAGES/0x0-ModelX_09.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-.four .buttons{
-    margin-top: 5em;
-    padding-bottom: 8em;
-    margin-bottom: -5.5em;
-
 }
 
 .five{
-
     background: url(IMAGES/SolarPanels_90.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
 }
-.five .heading
-{
-    padding-top: 4em;
-}
+
 .six{
     background: url(IMAGES/SolarPanels_92.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-.six .heading{
-    margin-top: 2em;
-}
-.six .buttons{
-    padding-bottom: 8em;
 }
 
 .seven{
     background: url(IMAGES/0x0-Charging_22.jpg);
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
 }
 
-.seven .buttons{
-    height: 50vh;
-    padding-bottom: 1em; 
+.img{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.seven{
+    background-position: top;
+}
+
+@media screen and (max-width : 600px) {
+
+    .navlinks,.navlinks ul{
+        flex-direction: column;
+    }
+
+    nav{
+        position: static;
+    }
+
+    .navlinks{
+        height: 100vh;
+        background-color: white;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -350px;
+        width: 35vw;
+        gap: 0;
+        scroll-behavior: smooth;
+        transition: all 1s;
+        z-index: 100;
+
+    }
+
+    .navlinks ul:first-child{
+        margin-top: 2rem;
+    }
+
+    .navlinks ul{
+        font-size: 1.3rem;
+        align-items: flex-start;
+    }
+
+    .navlinks ul li{
+        margin-top: 1.2rem;
+    }
+
+    .textlogo{
+        text-align: center;
+        width: 100%;
+        font-size: 1.5rem;
+        padding-top: 0.5rem;
+        padding-left: 4rem;
+    }
+
+    .buttons{
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    .menu,.mark{
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+        margin-top: 0.4rem;
+        transition: all 0.5s;
+    }
+
+    .menu{
+        position: fixed;
+        right: 25px;
+    }
+
+    .mark{
+         align-self: flex-end;
+         margin-right: 2rem;
+         cursor: pointer;
+    }
+
+    .side{
+        right: 0;
+    }
 }

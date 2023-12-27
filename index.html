@@ -5,29 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TESLA CLONE 2023 VERSION</title>
     <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  </head>
 <body>
 
-   <div class="one img">
+   <div class="one img" id="model3">
         <div class="navbar">
             <nav>
                 <div class="textlogo">
                     <h2>tesla</h2>
                 </div>
+
                 <ul class="navlinks">
-                    <li><a href="#">Model 3</a></li>
-                    <li><a href="#">Model Y</a></li>
-                    <li><a href="#">Model S</a></li>
-                    <li><a href="#">Model X</a></li>
-                    <li><a href="#">Solar Panels</a></li>
-                    <li><a href="#">Solar Roof</a></li>
-                    <li><a href="#">Accessories</a></li>
+                  <div class="mark">
+                    <i class="fa-solid fa-xmark"></i>
+                  </div>
+                   <ul>
+                      <li><a href="#model3">Model 3</a></li>
+                      <li><a href="#modelx">Model X</a></li>
+                      <li><a href="#model9">Model 9</a></li>
+                      <li><a href="#modely">Model Y</a></li>
+                      <li><a href="#model5">Model 5</a></li>
+                      <li><a href="#powerpoll">Power Poll</a></li>
+                      <li><a href="#charger">Charger</a></li>
+                   </ul>
+                    <ul>
+                      <li><a href="#">Shop</a></li>
+                      <li><a href="#">Account</a></li>
+                      <li><a href="#">Menu</a></li>
+                    </ul>
                 </ul>
-                <ul class="links">
-                    <li><a href="#">Shop</a></li>
-                    <li><a href="#">Account</a></li>
-                    <li><a href="#">Menu</a></li>
-                </ul>
+
+                <div class="menu">
+                  <i class="fa-solid fa-bars"></i>
+                </div>
+
             </nav>
         </div> 
           <div class="content">
@@ -44,7 +56,7 @@
           </div>
         
    </div>
-   <div class="two img">
+   <div class="two img" id="modelx">
     <div class="content">
         <div class="heading">
             <h1>Model X</h1>
@@ -57,7 +69,9 @@
                   <button>exciting inventory</button>
             </div>
    </div>
-   <div class="three img">
+   </div>   
+
+   <div class="three img" id="model9">
     <div class="content">
         <div class="heading">
             <h1>Model 9</h1>
@@ -69,11 +83,9 @@
                   <button>custom order</button>
                   <button>exciting inventory</button>
             </div>
-   
     </div>
-
    </div>
-   <div class="four img">
+   <div class="four img" id="modely">
     <div class="content">
         <div class="heading">
             <h1>Model Y</h1>
@@ -86,7 +98,9 @@
                   <button>exciting inventory</button>
             </div>
    </div>
-   <div class="five img">
+   </div>
+
+   <div class="five img" id="model5">
     <div class="content">
         <div class="heading">
             <h1>Model 5</h1>
@@ -99,7 +113,9 @@
                   <button>exciting inventory</button>
             </div>
    </div>
-   <div class="six img">
+   </div>
+
+   <div class="six img" id="powerpoll">
     <div class="content">
         <div class="heading">
             <h1>Power poll</h1>
@@ -111,9 +127,10 @@
                   <button>custom order</button>
                   <button>exciting inventory</button>
             </div>
-
    </div>
-   <div class="seven img">
+   </div>
+
+   <div class="seven img" id="charger">
     <div class="content">
         <div class="heading">
             <h1>Charger</h1>
@@ -126,5 +143,23 @@
                   <button>exciting inventory</button>
             </div>
    </div>
+   </div>
+
+
+   <script>
+      const navlinks = document.querySelector(".navlinks")
+      const menu = document.querySelector(".menu")
+      const mark = document.querySelector(".mark")
+
+      menu.addEventListener("click",()=>{
+          navlinks.classList.add("side")
+      })
+
+      mark.addEventListener("click",()=>{
+          navlinks.classList.remove("side")
+      })
+
+   </script>
+
 </body>
 </html>
