@@ -235,3 +235,15 @@ button:hover{
         right: 0;
     }
 }
+
+@media screen and (max-width  : 400px) {
+    .textlogo h2{
+        font-size: 1.5rem;
+        margin-right: 2rem;
+    }
+    
+    .side{
+        width: 170px;
+    }
+
+}
